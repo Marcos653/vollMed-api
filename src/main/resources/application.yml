@@ -1,7 +1,7 @@
 spring:
   datasource:
     #mysql local
-    url: jdbc:mysql://${MYSQLHOST}:${MYSQLPORT}}/${MYSQLDATABASE}
+    url: jdbc:mysql://${{ MYSQLUSER }}:${{ MYSQLPASSWORD }}@${{ MYSQLHOST }}:${{ MYSQLPORT }}/${{ MYSQLDATABASE }}
     username: ${MYSQLUSER}
     password: ${MYSQLPASSWORD}
 
@@ -11,3 +11,10 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+#  spring_profiles_active=prod
+#  MYSQLHOST=containers-us-west-72.railway.app
+#  MYSQLPORT=6830
+#  MYSQLDATABASE=railway
+#  MYSQLPASSWORD=ZHIeIqMdRw5wGpngEfXI
+#  MYSQLUSER=root
