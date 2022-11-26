@@ -1,8 +1,11 @@
 spring:
   datasource:
+    #mysql local
     url: jdbc:mysql://localhost/vollmed_api
-    username: root
+    username: newuser
     password: password
+
+    #postgres prod
 
   jpa:
     show-sql: true
